@@ -1,0 +1,556 @@
+*{
+   box-sizing: border-box;
+}
+/* Nhớ cho Height 100% để ăn theo cái row nếu không box sẽ không cân bằng nhau*/
+/* Cách cho chữ không bị xuống dòng khi co lại dùng max-width và margin auto */
+html,body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+.header{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 30px;
+}
+.header .inner-header{
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    border-radius: 45px;
+    background-color: #fff;
+    justify-content: space-between;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+.header .inner-header .inner-logo{
+    width: 15%;
+    margin-left: 10px;
+
+}
+.header .inner-header .inner-logo img{
+    width: auto;
+    height: 30px;
+}
+
+.header .inner-header .inner-list{
+    width: 75%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.header .inner-header .inner-list .inner-item{
+    list-style-type: none;
+    cursor: pointer;
+    color:#000;
+    font-size: 16px;
+
+}
+.header .inner-bar{
+    display: none;
+}
+.header .inner-header .inner-list .inner-item a.active{
+    color: var(--color-one);
+}
+.header .inner-header .inner-list .inner-item a:hover{
+    color: var(--color-one);
+}
+@media (max-width:1199.98px){
+    .header .inner-header .inner-list .inner-item{
+        font-size: 15px;
+    }
+    
+}
+@media (max-width:991.98px){
+    .header .inner-bar{
+        display: block;
+        font-size: 25px;
+        margin-right: 10px;
+    }
+    .header .inner-header .inner-list{
+        display: none;
+       
+    }
+}
+/*End  Header */ 
+
+/* base */
+.box-head{
+    
+    
+    margin-bottom: 50px;
+}
+.inner-title{
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.inner-desc{
+    margin: 0;
+    font-size: 18px;
+    color: #777777;
+    line-height: 1.5;
+}
+.btn{
+    padding: 8px 20px;
+    background-color: var(--color-one);
+    color: #fff;
+    font-size: 13px;
+    border-radius: 45px;
+    display: inline-block;
+}
+.btn:hover{
+    background-color: var(--color-two);
+}
+
+/* end base */
+
+/* Section-one */
+.Section-one{
+    background-image: url(../img/banner-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.Section-one .inner-head{
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.Section-one .inner-head{
+    
+}
+.Section-one .box-head{
+    text-align: center;  
+    margin-bottom: 40px;
+}
+.Section-one .box-head .inner-title-main{
+    color: #fff;
+    line-height: 1.5;
+}
+.Section-one .box-head .inner-desc-main{
+    color: #fff;
+}
+
+@media (max-width:767.98px){
+    .Section-one .box-head .inner-title-main{
+        font-size: 27px;
+    }
+    .Section-one .box-head .inner-desc-main{
+        font-size: 15px;
+    }
+}
+
+
+/* End Section-one  */
+
+/*  Section-two  */
+
+.Section-two .inner-box{
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px 20px;
+    display: flex;
+    position: relative;
+    z-index: 1;
+    margin-top: -200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+    background-color: #fff;
+}
+.Section-two .inner-icon{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--color-two);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.Section-two .inner-icon:hover{
+    background-color: var(--color-one);
+}
+.Section-two .box-head{
+    margin-bottom: 0;
+}
+.Section-two .inner-title{
+    font-size: 18px;
+}
+.Section-two .inner-desc{
+    font-size: 14px;
+    color: var(--colo-desc);
+}
+
+@media (max-width:991.98px){
+    .Section-two .inner-box{
+        margin: 0;
+        margin-bottom: 25px;
+    }
+}
+/* End Section-two  */
+
+/*  Section-three  */
+.Section-three .inner-main{
+    padding: 100px 0;
+    align-items: center;
+}
+.Section-three .inner-desc{
+    color: #777777;
+}
+.Section-three .inner-img{
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+     */
+     text-align: center;
+}
+.Section-three .inner-img img{
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width:991.98px){
+    .Section-three .inner-img{
+        margin-bottom: 30px;
+    }
+    .Section-three .inner-content{
+        margin-top: 30px;
+    }
+}
+@media (max-width:767.98px){
+    /* .Section-three .inner-main{
+        text-align: center;
+    } */
+}
+@media (max-width:576.98px){
+    .Section-three .inner-title{
+        font-size: 24px;
+    }
+    .Section-three .inner-desc{
+        font-size: 16px;
+    }
+}
+/* End Section-three  */
+
+/*  Section-four  */
+.Section-four{
+    padding: 80px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../img/work-process-bg.png);
+}
+.Section-four .box-head{
+    text-align: center;
+}
+.Section-four .box-head .inner-title1,.inner-desc1{
+    color: #fff;
+}
+
+.Section-four .inner-box{
+    background-color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+}
+.Section-four .inner-box .inner-title{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.Section-four .inner-box .inner-desc{
+    font-size: 14px;
+    
+}
+.Section-four .inner-box .box-head{
+    margin: 0;
+    margin-top: 20px;
+}
+@media (max-width:991.98px){
+    .Section-four .inner-box{
+        margin-bottom: 20px;
+    }
+}
+/* End Section-four */
+
+/*  Section-five */
+.Section-five{
+    padding: 100px 0;
+
+}
+.Section-five .box-head{
+    text-align: center;
+}
+.Section-five .inner-box{
+     background-color: #fff;
+     border-radius: 15px;
+     padding: 25px;
+     height: 100%;
+     /* Nhớ cho Height 100% để ăn theo cái row nếu không box sẽ không cân bằng nhau*/
+     box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.10);
+}
+     /* Nhớ cho Height 100% để ăn theo cái row nếu không box sẽ không cân bằng nhau*/
+
+.Section-five .inner-box .inner-img{
+    text-align: center;
+}
+
+.Section-five .inner-box .inner-desc{
+    margin: 25px 0;
+    font-size: 16px;
+}
+.Section-five .inner-box .inner-content img{
+    border-radius: 50%;
+}
+.Section-five .inner-box .inner-content .inner-author{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.Section-five .inner-box .inner-content .inner-position{
+    font-size: 14px;
+    color: var(--color-one);
+    
+}
+@media (max-width:991.98px){
+    .Section-five .inner-box{
+        margin-bottom: 20px;
+        height: auto;
+        /* Nhớ cho height bằng auto không thì sẽ không margin được các box.Box sẽ dính vào nhau */
+    }
+}
+/* End Section-five */
+
+/*  Section-six */
+.Section-six{
+    padding: 100px 0;
+    background-color: var(--color-bg);
+}
+.Section-six .box-head{
+    margin-bottom: 80px;
+    text-align: center;
+}
+.Section-six .inner-box{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+}
+.Section-six .inner-box .inner-list{
+    padding: 0;
+}
+.Section-six .inner-box .inner-list .inner-item{
+   margin-bottom: 10px;
+   position: relative;
+}
+
+.Section-six .inner-sub-title{
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.Section-six .inner-price{
+    padding: 10px;
+    background: var(--color-two);
+    border-radius: 20px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.Section-six .btn{
+    margin-top: 25px;
+}
+
+.Section-six .inner-box .inner-list .sale{
+    text-decoration: line-through;
+    
+}
+@media (max-width:991.98px){
+    .Section-six .inner-box{
+        margin-bottom: 20px;
+    }
+}
+/* End Section-six */
+
+/*  Section-seven */
+.Section-seven{
+    background-image: url(https://templatemo.com/templates/templatemo_535_softy_pinko/assets/images/fun-facts-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0;
+    background-position: center;
+}
+.Section-seven .inner-main{
+    padding: 40px;
+}
+.Section-seven .inner-number h3,span{
+    color: #fff;
+    font-weight: 600;
+}
+
+.Section-seven .inner-number{
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+
+}
+.Section-seven .inner-one::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-image: url(https://templatemo.com/templates/templatemo_535_softy_pinko/assets/images/circle-dec.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 95%;
+    top: 27%;
+}
+ .Section-seven .inner-three::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-image: url(https://templatemo.com/templates/templatemo_535_softy_pinko/assets/images/circle-dec.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 95%;
+    top: 27%;
+}
+
+.Section-seven .inner-two::after{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-image: url(https://templatemo.com/templates/templatemo_535_softy_pinko/assets/images/circle-dec.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 95%;
+    bottom: 0;
+    
+} 
+.Section-seven .inner-number:hover{
+    bottom: 30px;
+}
+
+@media (max-width:991.98px){
+    .Section-seven .inner-two::after,.inner-one::after,.inner-three::after{
+        display: none;
+    }
+    .Section-seven .inner-number{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .Section-seven{
+        padding: 50px 0;
+    }
+
+}
+
+/* End Section-seven */
+
+/*  Section-eight */
+.Section-eight{
+    padding: 100px 0;
+
+}
+.Section-eight .box-head{
+    text-align: center;
+}
+.Section-eight .inner-box .inner-img img{
+    width: 100%;
+    height: auto;
+}
+.Section-eight .inner-content{
+    text-align: center;
+}
+.Section-eight .inner-content .box-head{
+    margin-top: 30px;
+}
+@media (max-width:991.98px){
+    .Section-eight .inner-box{
+        margin-bottom: 40px;
+    }
+}
+/* End Section-eight */
+
+/*  Section-night */
+.Section-night{
+    padding: 100px 0;
+    background-color: var(--color-bg);
+}
+.Section-night .box-head{
+    text-align: center;
+}
+.Section-night .inner-content .box-head{
+    text-align: left;
+    margin: 0;
+    
+}
+.Section-night .inner-content .box-head .inner-desc{
+    margin-top: 20px;
+    font-size: 16px;
+     
+}
+
+.Section-night .inner-content .box-head .inner-sub-desc{
+    margin-top: 20px;
+    color: #777777;
+    font-size: 16px;
+}
+.Section-night .inner-form .form-control{
+    border-radius: 20px;
+    padding: 20px;
+}
+/* End Section-night */
+
+/* Footer */
+.footer{
+    background-image: linear-gradient(127deg, #a759d1 0%, #8261ee 91%);
+}
+.footer .inner-social{
+    padding: 25px 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer .inner-social .inner-item{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 40px;
+}
+.footer .inner-social .inner-item:hover{
+    background-color: var(--color-one);
+    color: #fff;
+}
+.footer .inner-social .inner-item i{
+    font-size: 14px;
+    color:#9d5bd9;
+}
+.footer .inner-contact{
+    padding: 25px 0;
+}
+
+.footer .inner-contact{
+    text-align: center;
+    color: #fff;
+}
+/*End Footer */
+
+
+
+
+
+
+
+
